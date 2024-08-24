@@ -206,7 +206,7 @@ button:active {
 }
 
 .seeImg img {
-  max-width: 500px;
+  max-width: 460px;
   height: auto;
   padding: 6px;
   background: linear-gradient(60deg, #db569f 0%, #e5f04f 40%, #08afde 100%);
@@ -233,7 +233,6 @@ p {
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 10px;
-  margin-left: 2.5rem;
   margin-right: 1.5rem;
   text-align: justify;
   text-justify: inter-word;
@@ -245,4 +244,16 @@ p {
   color: #666;
   text-align: justify;
   text-justify: inter-word;
+}
+
+@media screen and (width <= 1045px) {
+  .content {
+    width: 95%;
+
+    padding: 40px 1.5rem;
+  }
+
+  .delete button {
+    transform: translate(0, 0);
+  }
 }

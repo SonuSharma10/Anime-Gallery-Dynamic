@@ -67,6 +67,24 @@ posts = [
       'https://img.freepik.com/free-photo/men-women-embrace-sunset-generative-ai_188544-12581.jpg?size=626&ext=jpg&ga=GA1.1.50465975.1724476644&semt=ais_hybrid',
     ],
   },
+  {
+    id: uuidv4(),
+    username: 'chaos',
+    thaught: '#.',
+    image: [
+      'https://mrwallpaper.com/images/high/best-hd-undead-overlord-art-lai9pfv0hmly995k.webp',
+      'https://images8.alphacoders.com/934/934002.jpg',
+      'https://www.ultraimagehub.com/wallpapers/tr:flp-false,gx-0.5,gy-0.5,q-75,rh-3264,rw-5824,th-1080,tw-1920/1233309156992221224.jpeg',
+    ],
+  },
+  {
+    id: uuidv4(),
+    username: 'Kartik',
+    thaught: 'DMX is Best :)',
+    image: [
+      'https://media.licdn.com/dms/image/C4E0BAQGh0sT4loZq7g/company-logo_200_200/0/1674577828904?e=2147483647&v=beta&t=VtGL9yVwBXHjI8QoEVNi8QXUpCEwUUi4FqDEU37Lkdg',
+    ],
+  },
 ];
 
 app.get('/', (req, res) => {

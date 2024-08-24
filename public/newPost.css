@@ -99,3 +99,10 @@ button:active {
   /* border: 3px solid black; */
   transition: 1s;
 }
+
+@media screen and (width <= 1045px) {
+  .addPost {
+    width: 95%;
+    padding: 40px 1.5rem;
+  }
+}

@@ -274,6 +274,13 @@ footer p {
 }
 
 @media screen and (width <= 630px) {
+  body {
+    margin-top: 0;
+  }
+
+  nav {
+    position: relative;
+  }
   .galleryTitle {
     font-size: 1.5rem;
   }
@@ -312,6 +319,10 @@ footer p {
 
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  .gallery {
+    padding-top: 0;
   }
 }
 

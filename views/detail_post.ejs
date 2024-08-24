@@ -45,7 +45,8 @@
       <div class="container">
         <% for( let index = 0; index < post.image.length; index ++) { %>
         <div class="seeImg">
-          <img src="<%=post.image[index]%>" alt="" />
+          <a href="<%=post.image[index]%>">
+            <img src="<%=post.image[index]%>" alt="" />
         </div>
         <% } %>
       </div>
