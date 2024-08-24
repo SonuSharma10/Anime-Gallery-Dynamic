@@ -1,6 +1,6 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
-const path = 8080;
 const { v4: uuidv4 } = require('uuid');
 // using npm module method-override to use put/patch/delete methods
 const methodOverride = require('method-override');
@@ -12,6 +12,11 @@ app.use(express.static(__dirname + '/public'));
 
 // override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
+
+// Use PORT from environment variables, default to 8080 if not set
+const PORT = process.env.PORT || 8080;
+// Use BASE_URL from environment variables, default to localhost if not set
+const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
 
 //declaration of sample data
 posts = [
@@ -69,12 +74,13 @@ app.get('/', (req, res) => {
 });
 //fetching index.js on /posts
 app.get('/posts', (req, res) => {
-  res.render('index.ejs', { posts });
+  // console.log(process.env.BASE_URL);
+  res.render('index.ejs', { posts, BASE_URL });
 });
 
 //new post creation request on /posts/new
 app.get('/posts/new', (req, res) => {
-  res.render('new_thaught.ejs');
+  res.render('new_thaught.ejs', { BASE_URL });
 });
 
 //update new post in /posts and redirect there
@@ -99,7 +105,7 @@ app.get('/posts/:id', (req, res) => {
   const selectedPost = posts.find((post) => post.id === Uid);
   if (!selectedPost) {
     res.status(404).send('<h1>404! Page not found</h1>');
-  } else res.render('detail_post.ejs', { post: selectedPost });
+  } else res.render('detail_post.ejs', { post: selectedPost, BASE_URL });
 });
 
 //this and bellow PATCH is in link andthey are used as to update the post
@@ -108,7 +114,7 @@ app.get('/posts/update/:id', (req, res) => {
   const selectedPost = posts.find((post) => post.id === Uid);
   if (!selectedPost) {
     res.status(404).send('<h1>404! Page not found</h1>');
-  } else res.render('update.ejs', { post: selectedPost });
+  } else res.render('update.ejs', { post: selectedPost, BASE_URL });
 });
 
 //redirecting and using the patch by "_method=PATCH"
@@ -131,14 +137,14 @@ app.delete('/posts/:id', (req, res) => {
 });
 // info page
 app.get('/info', (req, res) => {
-  res.render('info.ejs');
+  res.render('info.ejs', { BASE_URL });
 });
 
 app.get('*', (req, res) => {
   res.status(404).send('<h1>404! Page not found</h1>');
 });
 
-app.listen(path, () => {
-  console.log('listning on port', path);
-  console.log('follow --> http://localhost:8080');
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
+  console.log(`Follow --> ${BASE_URL}`);
 });

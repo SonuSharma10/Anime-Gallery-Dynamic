@@ -30,8 +30,8 @@
         <span class="galleryTitle">ANIME GALLERY</span>
       </div>
       <div class="links">
-        <a href="http://localhost:8080/posts/new"><i class="fa-solid fa-circle-plus"></i> Create</a>
-        <a href="http://localhost:8080/info"><i class="fa-solid fa-circle-info"></i> Info</a>
+        <a href="<%=BASE_URL%>/posts/new"><i class="fa-solid fa-circle-plus"></i> Create</a>
+        <a href="<%=BASE_URL%>/info"><i class="fa-solid fa-circle-info"></i> Info</a>
       </div>
     </nav>
 
@@ -44,7 +44,7 @@
           <h4 class="caption"><i class="fa-solid fa-pen"></i></i> ❝<%=post.thaught%>❞</h4>
         </div>
         <div class="update-delete">
-          <a href="http://localhost:8080/posts/update/<%=post.id%>" class="update"
+          <a href="<%=BASE_URL%>/posts/update/<%=post.id%>" class="update"
             ><i class="fa-solid fa-pen-to-square"></i> Update</a
           >
           <div class="delete">
@@ -63,7 +63,7 @@
       <% } %>
     </div>
     <button class="seeAll">
-      <a href="http://localhost:8080/posts/<%=post.id%>"
+      <a href="<%=BASE_URL%>/posts/<%=post.id%>"
         >SEE ALL</a></button>
   </div>
 </div>
