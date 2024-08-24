@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel='stylesheet' id='fontawesome-css'  href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1' type='text/css' media='all' /> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Anime Gallery</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="../assets/anime.webp" alt="error" class="navImg" />
+        <span class="galleryTitle">ANIME GALLERY</span>
+      </div>
+      <div class="links">
+        <a href="http://localhost:8080/posts/new"><i class="fa-solid fa-circle-plus"></i> Create</a>
+        <a href="http://localhost:8080/info"><i class="fa-solid fa-circle-info"></i> Info</a>
+      </div>
+    </nav>
+
+    <% for(post of posts) { %>
+      <div class="parent">
+    <div class="gallery">
+      <div class="mainInfo">
+        <div class="usercaption">
+          <h3 class="username"><i class="fa-solid fa-user"></i> @<%=post.username%></h3>
+          <h4 class="caption"><i class="fa-solid fa-pen"></i></i> ❝<%=post.thaught%>❞</h4>
+        </div>
+        <div class="update-delete">
+          <a href="http://localhost:8080/posts/update/<%=post.id%>" class="update"
+            ><i class="fa-solid fa-pen-to-square"></i> Update</a
+          >
+          <div class="delete">
+            <form method="post" action="/posts/<%=post.id%>?_method=delete">
+              <button><i class="fa-solid fa-trash-can"></i> Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    <div class="images">
+      <% for( let index = 0; index < 3;index ++) { %> 
+        <% if (post.image[index] != "" && post.image[index] != undefined) { %> 
+          <img src="<%=post.image[index]%>" alt="" class="animeImg"/> 
+          <% } %>
+      
+      <% } %>
+    </div>
+    <button class="seeAll">
+      <a href="http://localhost:8080/posts/<%=post.id%>"
+        >SEE ALL</a></button>
+  </div>
+</div>
+
+    <% } %>
+
+    <footer>
+      <p>Copyright © 2024, Anime Gallery, Sonu Sharma</p>
+    </footer>
+  </body>
+</html>

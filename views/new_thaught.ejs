@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/newPost.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Create Your Gallery</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="../assets/anime.webp" alt="error" class="navImg" />
+        <span class="galleryTitle">CREATE GALLERY</span>
+      </div>
+      <div class="links">
+        <a href="http://localhost:8080/posts"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#"><i class="fa-solid fa-circle-info"></i> Info</a>
+      </div>
+    </nav>
+    <div class="addPost">
+      <form action="/posts" method="post">
+        <div class="input_username">
+          <label for="username" class="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            placeholder="@Username"
+            id="username"
+            size="50"
+            required
+          />
+        </div>
+        <div class="input_caption">
+          <label for="thaughts" class="caption">Caption for Your Gallery</label>
+          <textarea
+            name="thaught"
+            id="thaught"
+            rows="5"
+            cols="50"
+            placeholder="#captions"
+          ></textarea>
+        </div>
+        <div class="input_img">
+          <div class="AnimeUrl">
+            <label for="image" class="label">Anime Image/s</label>
+            <a id="addButton"><i class="fa-solid fa-square-plus"></i></a>
+          </div>
+          <input type="url" name="image" id="image" size="90" placeholder="🔗 Image Url" required />
+
+          <div class="add_img"></div>
+        </div>
+        <br />
+        <br />
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>Copyright © 2024, Anime Gallery, Sonu Sharma</p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

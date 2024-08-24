@@ -1,0 +1,101 @@
+* {
+  font-family: 'Platypi', serif;
+  font-weight: 600;
+}
+
+.addPost {
+  background: linear-gradient(125deg, #e367ab 0%, #fad0c4 70%, #e38065 100%);
+  border-radius: 30px;
+  width: 80%;
+  margin: auto;
+  padding: 50px 4rem;
+  margin-bottom: 50px;
+}
+
+.input_username {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 0.8;
+}
+#username {
+  width: 100%;
+  padding: 8px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border: 3px solid black;
+  font-size: 17px;
+  border-radius: 10px;
+}
+.input_caption {
+  display: flex;
+  flex-direction: column;
+}
+.caption {
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+#thaught {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px;
+  padding-left: 8px;
+  line-height: 1.5;
+  border: 3px solid black;
+  font-size: 15px;
+  resize: vertical;
+  border-radius: 10px;
+}
+
+.label {
+  font-size: 1.3rem;
+  font-style: normal;
+  line-height: 2.4;
+}
+#image {
+  width: 100%;
+  padding: 5px;
+  line-height: 1.5;
+  border: 3px solid black;
+  font-size: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+#addButton {
+  cursor: pointer;
+}
+
+.fa-square-plus {
+  font-size: 2.5rem;
+}
+
+.AnimeUrl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1.2rem;
+  transition: 1s;
+  background-color: #f7d1c7;
+}
+button:hover,
+button:active {
+  background: linear-gradient(200deg, #e367ab 0%, #fad0c4 70%, #e38065 100%);
+  /* border: 3px solid black; */
+  transition: 1s;
+}

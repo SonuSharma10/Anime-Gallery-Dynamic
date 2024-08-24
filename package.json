@@ -1,0 +1,20 @@
+{
+  "name": "your-thoughts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Sonu Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0",
+    "nodemon": "^3.1.4",
+    "uuid": "^10.0.0"
+  }
+}

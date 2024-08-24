@@ -1,0 +1,248 @@
+* {
+  font-family: 'Platypi', serif;
+  font-weight: 600;
+}
+
+.content {
+  background: linear-gradient(125deg, #e367ab 0%, #fad0c4 70%, #e38065 100%);
+  border-radius: 30px;
+  width: 80%;
+  margin: auto;
+  padding: 30px 4rem;
+  margin-bottom: 50px;
+}
+
+.uID {
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.delete button {
+  transform: translate(40px, -5px);
+  color: #2e112d;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 9px 20px;
+  border: 3px solid #000000;
+  background: linear-gradient(135deg, #f0433ac1 10%, #2e112d68 90%);
+  font-weight: 500;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.delete button:hover {
+  /* background: linear-gradient(145deg, #782c0b 10%, #a72e91 60%); */
+  background: #9b0a46;
+  color: rgb(255, 246, 231);
+  box-shadow: none;
+  transition: 0.5s;
+  font-weight: 700;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.username {
+  font-style: italic;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 0.8;
+  margin-bottom: 30px;
+}
+
+.username span {
+  font-style: normal;
+  font-weight: 800;
+}
+
+.input_caption {
+  display: flex;
+  flex-direction: column;
+}
+.caption {
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+#thaught {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+  padding-left: 8px;
+  line-height: 1.5;
+  border: 4px solid black;
+  font-size: 15px;
+  resize: vertical;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.input_img {
+  display: flex;
+  flex-direction: column;
+}
+
+.information {
+  display: grid;
+  grid-template-columns: auto 50px;
+  grid-template-rows: auto auto;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+.updated_img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 30vh;
+  border: 4px solid rgb(35, 5, 144);
+  border-radius: 10px;
+  margin-bottom: 3px;
+}
+
+#image {
+  width: 100%;
+  padding: 8px 5px;
+  background-color: white;
+  border: 3px solid black;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.remove_img {
+  border-radius: 10px;
+  border: 3px solid black;
+  font-size: 1.1rem;
+  margin-left: 3px;
+  margin-bottom: 10px;
+  background: linear-gradient(40deg, #ed4a4a 0%, #ffffff 60%, #ff0000 100%);
+  transition: 0.5s;
+}
+
+.remove_img:hover {
+  /* background: linear-gradient(60deg, #ac7292 0%, #ef7777 30%, #cb4723 100%); */
+  background: #b00a4f;
+  color: white;
+  transition: 0.5s;
+}
+
+#addButton {
+  cursor: pointer;
+}
+
+.fa-square-plus {
+  font-size: 2.5rem;
+}
+
+.AnimeUrl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.AnimeUrl label {
+  font-size: 1.2rem;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1.2rem;
+  transition: 1s;
+  background-color: #f7d1c7;
+}
+button:hover,
+button:active {
+  background: linear-gradient(200deg, #e367ab 0%, #fad0c4 70%, #e38065 100%);
+  /* border: 3px solid black; */
+  transition: 1s;
+}
+
+.dashed {
+  border: 2px dashed #810539;
+  width: 100%;
+  transform: scale(1.12);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* ----------------------------------------------------------------------------- */
+.username2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.seeAllCaption {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.seeImg img {
+  max-width: 500px;
+  height: auto;
+  padding: 6px;
+  background: linear-gradient(60deg, #db569f 0%, #e5f04f 40%, #08afde 100%);
+  border-radius: 16px;
+}
+
+/* ----------------------------------Info Page-------------------------------------- */
+.border {
+  width: 75%;
+  margin: auto;
+  padding: 13px;
+  background: linear-gradient(155deg, #dde0c7 10%, #840f6a 40%, #a31212 70%, #000000 100%);
+}
+.note {
+  padding: 30px;
+  background-color: #b48d9d;
+}
+
+.infoH1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin-left: 2.5rem;
+  margin-right: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  margin-top: 1.2rem;
+  color: #666;
+  text-align: justify;
+  text-justify: inter-word;
+}

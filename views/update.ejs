@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/update.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Platypi:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Update Post</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="/assets/anime.webp" alt="error" class="navImg" />
+        <span class="galleryTitle">ANIME GALLERY</span>
+      </div>
+      <div class="links">
+        <a href="http://localhost:8080/posts/new"><i class="fa-solid fa-circle-plus"></i> Create</a>
+        <a href="http://localhost:8080/posts"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#"><i class="fa-solid fa-circle-info"></i> Info</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="info">
+        <p class="uID">UserID : <%=post.id%></p>
+        <div class="delete">
+          <form method="post" action="/posts/<%=post.id%>?_method=delete">
+            <button type="submit">Delete Post</button>
+          </form>
+        </div>
+      </div>
+
+      <form action="/posts/update/<%=post.id%>?_method=patch" method="post">
+        <div class="gall">
+          <h3 class="username"><span>Username : </span>@<%=post.username%></h3>
+          <div class="input_caption">
+            <label for="thaughts" class="caption">Caption of the gallery</label>
+            <textarea name="thaught" id="thaught" rows="5" cols="40" placeholder="#captions">
+<%=post.thaught%>
+</textarea
+            >
+          </div>
+          <label for="image" class="title">Anime Image/s :</label>
+          <% for( let index = 0; index < post.image.length; index ++) { %> <% if
+          (post.image[index]=="") { %> <% index -- %> <% } %>
+          <span class="information">
+            <img class="updated_img" src="<%=post.image[index]%>" alt="" />
+            <input type="url" name="image" id="image" value="<%=post.image[index]%>" />
+
+            <button type="button" class="remove_img"><i class="fa-solid fa-trash"></i></button>
+          </span>
+
+          <% } %>
+          <hr class="dashed" />
+          <div class="AnimeUrl">
+            <label for="image">Add more Image/s URL (If Available):</label>
+
+            <a id="addButton"><i class="fa-solid fa-square-plus"></i> </a>
+          </div>
+          <input type="url" name="image" id="image" style="display: none" />
+          <input type="url" name="image" id="image" placeholder="🔗 Image Url" />
+          <div class="add_img"></div>
+        </div>
+
+        <button type="submit">SUBMIT</button>
+      </form>
+    </div>
+    <footer>
+      <p>Copyright © 2024, Anime Gallery, Sonu Sharma</p>
+    </footer>
+    <script src="/app.js"></script>
+    <script>
+      let btns = document.querySelectorAll('.remove_img');
+      for (btn of btns) {
+        btn.addEventListener('click', function delImg(event) {
+          const spanElement = event.target.closest('span');
+          if (spanElement) {
+            spanElement.remove();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
