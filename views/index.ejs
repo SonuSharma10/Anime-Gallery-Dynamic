@@ -47,7 +47,7 @@
           <a href="<%=BASE_URL%>/posts/update/<%=post.id%>" class="update"
             ><i class="fa-solid fa-pen-to-square"></i> Update</a
           >
-          <div class="delete">
+          <div class="delete" style="display: none;">
             <form method="post" action="/posts/<%=post.id%>?_method=delete">
               <button><i class="fa-solid fa-trash-can"></i> Delete</button>
             </form>
