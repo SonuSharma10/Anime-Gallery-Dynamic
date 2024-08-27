@@ -90,6 +90,21 @@ posts = [
 app.get('/', (req, res) => {
   res.redirect('/posts');
 });
+
+// Viewing the API of posts
+app.get('/api', (req, res) => {
+  res.json(posts);
+});
+
+// filter API with username
+app.get('/api/:username', (req, res) => {
+  const username = req.params.username;
+  let regex = new RegExp(username, 'gi');
+  const filtered = posts.filter((post) => post.username.match(regex));
+  // console.log(filtered);
+  res.json(filtered);
+});
+
 //fetching index.js on /posts
 app.get('/posts', (req, res) => {
   // console.log(process.env.BASE_URL);
