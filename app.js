@@ -111,6 +111,24 @@ app.get('/posts', (req, res) => {
   res.render('index.ejs', { posts, BASE_URL });
 });
 
+// In your Express.js server file (e.g., app.js)
+
+const axios = require('axios');
+
+app.get('/download', async (req, res) => {
+  const { url } = req.query; // Get the image URL from the query parameters
+
+  try {
+    const response = await axios.get(url, { responseType: 'stream' });
+    res.setHeader('Content-Disposition', `attachment; filename=${url.split('/').pop()}`);
+    response.data.pipe(res);
+  } catch (error) {
+    res.status(500).send('Error downloading the file');
+  }
+});
+
+// Other routes and server configuration...
+
 //new post creation request on /posts/new
 app.get('/posts/new', (req, res) => {
   res.render('new_thaught.ejs', { BASE_URL });

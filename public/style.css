@@ -342,3 +342,26 @@ footer p {
     padding: 5px;
   }
 }
+
+.seeImg {
+  position: relative; /* Allows absolute positioning of the icon within this container */
+  display: inline-block; /* Keeps the image and icon together */
+}
+
+.seeImg img {
+  display: block; /* Ensures the image does not have any gaps */
+  width: 100%; /* Adjust as needed */
+}
+
+.download-icon {
+  position: absolute;
+  top: 10px; /* Adjust the value to fine-tune the position */
+  right: 10px; /* Adjust the value to fine-tune the position */
+  font-size: 20px; /* Adjust size as needed */
+  color: white; /* Adjust the color based on your needs */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+  padding: 5px; /* Optional: Adds some space around the icon */
+  border-radius: 50%; /* Optional: Rounds the background */
+  cursor: pointer; /* Changes the cursor to pointer on hover */
+  z-index: 10; /* Ensures the icon stays on top of the image */
+}
