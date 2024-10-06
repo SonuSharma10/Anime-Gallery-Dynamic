@@ -31,7 +31,7 @@ Installing node packages
 ```bash 
 npm install
 ```
-Create a .env file and add these lines
+Create a <code>.env</code> file and add these lines
 ```bash 
 BASE_URL=http://localhost:8080
 PORT=8080
